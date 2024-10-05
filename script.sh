@@ -20,6 +20,7 @@ VBoxManage modifyvm "$nom" --nic1 nat
 
 # Crear el disco duro virtual
 VBoxManage createhd --filename "/home/gemma/maquinas/$nom/$nom.vdi" --size "$tamDiscoDuro" --variant Standard
+
 # Agregamos el controlador SATA del disco virtual
 VBoxManage storagectl "$nom" --name "SATA Controller" --add sata --bootable on
 
